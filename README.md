@@ -86,7 +86,7 @@ const getEmployees = async () => {
       method: "GET"
    });
 
-   if (!response.ok) {
+   if (!res.ok) {
      throw new Error(`Failed to get employees: ${response.statusText}`);
    }
 
@@ -103,7 +103,7 @@ const addEmployee = async (firstname, lastname, age, isMarried) => {
      body: JSON.stringify({ firstname, lastname, age, isMarried }),
    });
 
-   if (!response.ok) {
+   if (!res.ok) {
      throw new Error(`Failed to add employee: ${response.statusText}`);
    }
 
